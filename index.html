@@ -30,7 +30,7 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
-            <li class="nav-item"><a class="nav-link active" href="#top">BACKYARD</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#products" role="button" data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
               <ul class="dropdown-menu dropdown-menu-dark">
@@ -42,7 +42,7 @@
             <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-light ms-2 px-3" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">加入會員</a>
+              <a class="nav-link btn btn-outline-light ms-2 px-3" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">SIGN/JOIN</a>
             </li>
           </ul>
         </div>
@@ -132,9 +132,9 @@
               <article class="card product-card h-100">
                 <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=85" class="card-img-top" alt="商業影片拍攝現場">
                 <div class="card-body">
-                  <h3 class="card-title">商業形象影片</h3>
+                  <h3 class="card-title"><a href="commercial.html">商業形象影片</a></h3>
                   <p class="card-text">品牌主張、產品亮點與服務流程，以完整敘事建立專業信任感。</p>
-                  <a href="#" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
+                  <a href="goal.html" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
                 </div>
               </article>
             </div>
@@ -144,7 +144,7 @@
                 <div class="card-body">
                   <h3 class="card-title">音樂錄影帶</h3>
                   <p class="card-text">以節奏、表演與場景設計，替歌曲建立鮮明且可分享的視覺記憶。</p>
-                  <a href="#" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
+                  <a href="goal.html" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
                 </div>
               </article>
             </div>
@@ -246,6 +246,7 @@
               }
             ]
           });
+          window.location.assign(button.href);
         });
       });
     </script>

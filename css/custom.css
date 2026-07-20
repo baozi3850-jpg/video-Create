@@ -402,6 +402,16 @@ img {
   font-weight: 800;
 }
 
+.product-card .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card .card-title a:hover,
+.product-card .card-title a:focus {
+  color: var(--dream);
+}
+
 .product-card .card-text {
   color: var(--muted);
   line-height: 1.75;
@@ -426,6 +436,56 @@ img {
   color: #fff;
   background: var(--dream);
   transform: translateY(-2px);
+}
+
+.portfolio-hero {
+  padding: clamp(88px, 13vw, 160px) 0 clamp(72px, 9vw, 112px);
+  color: #fff;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(245, 234, 200, 0.25), transparent 14%),
+    radial-gradient(circle at 66% 52%, rgba(112, 87, 168, 0.32), transparent 28%),
+    #050510;
+}
+
+.portfolio-hero .lead-copy {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.portfolio-section {
+  background: var(--paper);
+}
+
+.portfolio-card {
+  padding: 2rem;
+  background: #fff;
+  border-top: 4px solid var(--dream);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.portfolio-card p:not(.section-kicker) {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.portfolio-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #211c35;
+  font-weight: 800;
+  text-decoration-color: var(--dream);
+  text-underline-offset: 0.3em;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  color: var(--dream);
 }
 
 .site-footer {

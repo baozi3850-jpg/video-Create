@@ -9,6 +9,7 @@
 ```text
 WEB/
 ├── index.html
+├── commercial.html
 ├── PROJECT_SPEC.md
 ├── bootstrap-5.3.8-dist/
 │   ├── css/
@@ -64,6 +65,10 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
    - 公司資訊
    - 服務項目
    - 版權宣告
+
+## 商業形象影片作品集
+
+`commercial.html` 為商業形象影片作品集頁面，從首頁「商業形象影片」標題連入。頁面目前提供三個影片連結欄位；請將各卡片中 `href="https://www.youtube.com/"` 改為正式作品網址。
 
 ## CSS 引用規則
 
