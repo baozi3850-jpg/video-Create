@@ -217,6 +217,7 @@
       document.querySelectorAll('[data-checkout-button]').forEach(function (button) {
         button.addEventListener('click', function (event) {
           event.preventDefault();
+          alert('您已將商品加入購物車');
           gtag('event', 'begin_checkout', {
             currency: 'TWD',
             value: 1234,
