@@ -134,7 +134,7 @@
                 <div class="card-body">
                   <h3 class="card-title">商業形象影片</h3>
                   <p class="card-text">品牌主張、產品亮點與服務流程，以完整敘事建立專業信任感。</p>
-                  <a href="#" type="button" class="btnstyle" id="btnstyle">加入購物車</a>
+                  <a href="#" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
                 </div>
               </article>
             </div>
@@ -144,6 +144,7 @@
                 <div class="card-body">
                   <h3 class="card-title">音樂錄影帶</h3>
                   <p class="card-text">以節奏、表演與場景設計，替歌曲建立鮮明且可分享的視覺記憶。</p>
+                  <a href="#" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
                 </div>
               </article>
             </div>
@@ -213,35 +214,37 @@
     </footer>
 
     <script>
-      document.getElementById('btnstyle').addEventListener('click', function (event) {
-        event.preventDefault();
-        gtag('event', 'begin_checkout', {
-          currency: 'TWD',
-          value: 1234,
-          coupon: 'SUMMER_FUN',
-          items: [
-            {
-              item_id: 'SKU_12345',
-              item_name: 'Stan and Friends Tee',
-              affiliation: 'Google Merchandise Store',
-              coupon: 'SUMMER_FUN',
-              discount: 2.22,
-              index: 0,
-              item_brand: 'Google',
-              item_category: 'Apparel',
-              item_category2: 'Adult',
-              item_category3: 'Shirts',
-              item_category4: 'Crew',
-              item_category5: 'Short sleeve',
-              item_list_id: 'related_products',
-              item_list_name: 'Related Products',
-              item_variant: 'green',
-              location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-              price: 10.01,
-              google_business_vertical: 'retail',
-              quantity: 3
-            }
-          ]
+      document.querySelectorAll('[data-checkout-button]').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          gtag('event', 'begin_checkout', {
+            currency: 'TWD',
+            value: 1234,
+            coupon: 'SUMMER_FUN',
+            items: [
+              {
+                item_id: 'SKU_12345',
+                item_name: 'Stan and Friends Tee',
+                affiliation: 'Google Merchandise Store',
+                coupon: 'SUMMER_FUN',
+                discount: 2.22,
+                index: 0,
+                item_brand: 'Google',
+                item_category: 'Apparel',
+                item_category2: 'Adult',
+                item_category3: 'Shirts',
+                item_category4: 'Crew',
+                item_category5: 'Short sleeve',
+                item_list_id: 'related_products',
+                item_list_name: 'Related Products',
+                item_variant: 'green',
+                location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+                price: 10.01,
+                google_business_vertical: 'retail',
+                quantity: 3
+              }
+            ]
+          });
         });
       });
     </script>

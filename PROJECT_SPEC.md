@@ -26,6 +26,15 @@ WEB/
 - 自訂 CSS：`css/custom.css`
 - JavaScript：使用 Bootstrap Bundle，本地端引用
 
+## GitHub 儲存庫
+
+目前專案遠端儲存庫：
+
+```text
+HTTPS: https://github.com/baozi3850-jpg/video-Create.git
+SSH:   git@github.com:baozi3850-jpg/video-Create.git
+```
+
 ## 首頁區塊順序
 
 首頁 `index.html` 由上到下包含以下區塊：
