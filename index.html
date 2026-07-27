@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dream creation Studio | </title>
+    <title>夢境影像 Dream Creation Studio｜商業影片、MV 與短影音製作</title>
+    <meta name="description" content="夢境影像提供商業形象影片、音樂錄影帶、社群短影音與活動紀錄服務，從企劃、拍攝到後期製作，協助品牌與創作者說出值得被記住的故事。">
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
     <!-- 以下為Google tag GA4全域頁面追蹤(gtag.js) -->
@@ -21,7 +22,7 @@
   <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark studio-nav">
       <div class="container">
-        <a class="navbar-brand" href="#top" aria-label="Dream creation Studio home">
+        <a class="navbar-brand" href="#top" aria-label="夢境影像 Dream Creation Studio 首頁">
           <span class="brand-mark">DC</span>
           <span class="brand-text">DREAM CREATION<br>STUDIO</span>
         </a>
@@ -30,19 +31,20 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
-            <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#top">首頁</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#products" role="button" data-bs-toggle="dropdown" aria-expanded="false">WORKS</a>
+              <a class="nav-link dropdown-toggle" href="commercial.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">作品</a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#products">COMMERCIAL</a></li>
-                <li><a class="dropdown-item" href="#products">MUSIC VIDEO</a></li>
-                <li><a class="dropdown-item" href="#products">SOCIAL VIDEO</a></li>
+                <li><a class="dropdown-item" href="commercial.html#commercial">商業影片</a></li>
+                <li><a class="dropdown-item" href="commercial.html#music-video">音樂錄影帶</a></li>
+                <li><a class="dropdown-item" href="commercial.html#social-video">社群短影音</a></li>
+                <li><a class="dropdown-item" href="commercial.html#event-record">活動紀錄</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">合作流程</a></li>
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-light ms-2 px-3" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">SIGN/JOIN</a>
+              <a class="nav-link btn btn-outline-light ms-lg-2 px-3" href="goal.html">專案詢價</a>
             </li>
           </ul>
         </div>
@@ -62,8 +64,8 @@
           <div class="carousel-item active">
             <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1800&q=85" class="d-block w-100" alt="攝影棚中的專業攝影機">
             <div class="carousel-caption">
-              <p class="section-kicker">夢境影像 Dream creation Studio</p>
-              <h1>Images that stay after the lights go down.</h1>
+              <p class="section-kicker">夢境影像 Dream Creation Studio</p>
+              <h1>用電影感影像，讓品牌故事被看見、被記住。</h1>
             </div>
           </div>
           <div class="carousel-item">
@@ -125,7 +127,7 @@
         <div class="container">
           <div class="section-heading">
             <p class="section-kicker text-dark">WORKS / SERVICE</p>
-            <h2 class="display-title">產品介紹</h2>
+            <h2 class="display-title">影像製作服務</h2>
           </div>
           <div class="row g-4">
             <div class="col-md-6 col-xl-3">
@@ -134,7 +136,7 @@
                 <div class="card-body">
                   <h3 class="card-title"><a href="commercial.html">商業形象影片</a></h3>
                   <p class="card-text">品牌主張、產品亮點與服務流程，以完整敘事建立專業信任感。</p>
-                  <a href="goal.html" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
+                  <a href="goal.html?service=commercial" class="btnstyle" data-service-link="商業形象影片">洽詢此服務</a>
                 </div>
               </article>
             </div>
@@ -144,7 +146,7 @@
                 <div class="card-body">
                   <h3 class="card-title">音樂錄影帶</h3>
                   <p class="card-text">以節奏、表演與場景設計，替歌曲建立鮮明且可分享的視覺記憶。</p>
-                  <a href="goal.html" type="button" class="btnstyle" data-checkout-button>加入購物車</a>
+                  <a href="goal.html?service=music-video" class="btnstyle" data-service-link="音樂錄影帶">洽詢此服務</a>
                 </div>
               </article>
             </div>
@@ -154,6 +156,7 @@
                 <div class="card-body">
                   <h3 class="card-title">社群短影音</h3>
                   <p class="card-text">針對 Reels、Shorts 與 TikTok 節奏製作，快速傳遞重點並提高停留。</p>
+                  <a href="goal.html?service=social-video" class="btnstyle" data-service-link="社群短影音">洽詢此服務</a>
                 </div>
               </article>
             </div>
@@ -163,10 +166,28 @@
                 <div class="card-body">
                   <h3 class="card-title">活動紀錄</h3>
                   <p class="card-text">完整捕捉現場流程、互動與情緒，讓每場活動留下可再次傳播的內容。</p>
+                  <a href="goal.html?service=event-record" class="btnstyle" data-service-link="活動紀錄">洽詢此服務</a>
                 </div>
               </article>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section-pad process-section" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">HOW WE WORK</p>
+            <h2 class="display-title">從想法到成片，讓每一步都清楚。</h2>
+          </div>
+          <div class="row g-4 process-grid">
+            <div class="col-md-6 col-xl"><article><span>01</span><h3>需求訪談</h3><p>確認影片目的、受眾、預算與時程。</p></article></div>
+            <div class="col-md-6 col-xl"><article><span>02</span><h3>企劃提案</h3><p>建立故事方向、腳本與視覺語言。</p></article></div>
+            <div class="col-md-6 col-xl"><article><span>03</span><h3>拍攝執行</h3><p>完成場景、團隊與現場製作管理。</p></article></div>
+            <div class="col-md-6 col-xl"><article><span>04</span><h3>後期製作</h3><p>進行剪輯、調色、聲音與版本確認。</p></article></div>
+            <div class="col-md-6 col-xl"><article><span>05</span><h3>成品交付</h3><p>依使用平台輸出合適格式與版本。</p></article></div>
+          </div>
+          <a class="btnstyle mt-4" href="goal.html">開始專案詢價</a>
         </div>
       </section>
     </main>
@@ -180,20 +201,14 @@
               <span class="brand-text">DREAM CREATION<br>STUDIO</span>
             </a>
             <p class="footer-copy">用影像把品牌、音樂與生活現場變成能被記住的故事。</p>
-            <div class="social-links" aria-label="社群連結">
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="YouTube">YT</a>
-              <a href="#" aria-label="Vimeo">VI</a>
-            </div>
+            <a class="btnstyle" href="goal.html">專案詢價</a>
           </div>
           <div class="col-sm-6 col-lg-3 offset-lg-1">
             <h2 class="footer-title">公司資訊</h2>
             <ul class="footer-list">
-              <li>夢境影像 Dream creation Studio</li>
-              <li>台北市中山區影像路 18 號</li>
-              <li>02-1234-5678</li>
-              <li>hello@dreamcreationstudio.example</li>
+              <li>夢境影像 Dream Creation Studio</li>
+              <li>服務地區：台灣及海外專案</li>
+              <li>合作聯絡：請使用專案詢價表單</li>
             </ul>
           </div>
           <div class="col-sm-6 col-lg-3">
@@ -207,46 +222,21 @@
           </div>
         </div>
         <div class="copyright">
-          <span>© 2026 Dream creation Studio. All Rights Reserved.</span>
+          <span>© 2026 Dream Creation Studio. All Rights Reserved.</span>
           <span>Design with Bootstrap 5.</span>
         </div>
       </div>
     </footer>
 
     <script>
-      document.querySelectorAll('[data-checkout-button]').forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          alert('您已將商品加入購物車');
-          gtag('event', 'begin_checkout', {
-            currency: 'TWD',
-            value: 1234,
-            coupon: 'SUMMER_FUN',
-            items: [
-              {
-                item_id: 'SKU_12345',
-                item_name: 'Stan and Friends Tee',
-                affiliation: 'Google Merchandise Store',
-                coupon: 'SUMMER_FUN',
-                discount: 2.22,
-                index: 0,
-                item_brand: 'Google',
-                item_category: 'Apparel',
-                item_category2: 'Adult',
-                item_category3: 'Shirts',
-                item_category4: 'Crew',
-                item_category5: 'Short sleeve',
-                item_list_id: 'related_products',
-                item_list_name: 'Related Products',
-                item_variant: 'green',
-                location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-                price: 10.01,
-                google_business_vertical: 'retail',
-                quantity: 3
-              }
-            ]
-          });
-          window.location.assign(button.href);
+      document.querySelectorAll('[data-service-link]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'select_content', {
+              content_type: 'service',
+              item_id: link.dataset.serviceLink
+            });
+          }
         });
       });
     </script>

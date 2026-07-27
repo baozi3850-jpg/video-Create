@@ -488,6 +488,164 @@ img {
   color: var(--dream);
 }
 
+.process-section {
+  color: #fff;
+  background: #0b0b14;
+}
+
+.process-section .section-kicker {
+  color: var(--dream);
+}
+
+.process-grid article {
+  height: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(245, 234, 200, 0.4);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.process-grid span {
+  color: var(--dream);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.process-grid h3 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.process-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 1.7;
+}
+
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.portfolio-filter a {
+  padding: 0.65rem 1rem;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-filter a:hover,
+.portfolio-filter a:focus {
+  color: #111;
+  background: var(--moon);
+}
+
+.portfolio-group {
+  padding-top: 92px;
+  margin-top: -48px;
+  margin-bottom: 5rem;
+}
+
+.portfolio-group > h2 {
+  margin-bottom: 1.75rem;
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
+  font-weight: 800;
+}
+
+.portfolio-card h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.portfolio-placeholder {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  border: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-cta {
+  padding: clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  background: #0b0b14;
+}
+
+.portfolio-cta p {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.inquiry-hero {
+  padding: clamp(80px, 12vw, 150px) 0;
+  color: #fff;
+  background: radial-gradient(circle at 80% 20%, rgba(191, 163, 122, 0.25), transparent 22%), #050510;
+}
+
+.inquiry-hero .lead-copy {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.inquiry-section {
+  background: var(--paper);
+}
+
+.inquiry-tips {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.form-note {
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #5f501f;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  border-left: 3px solid var(--dream);
+  background: #fff8df;
+}
+
+.inquiry-form,
+.form-success {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: #fff;
+}
+
+.inquiry-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.inquiry-form .form-control,
+.inquiry-form .form-select {
+  min-height: 50px;
+  border-radius: 0;
+  border-color: #c9c5ca;
+}
+
+.inquiry-form textarea.form-control {
+  min-height: 150px;
+}
+
+.inquiry-form .form-control:focus,
+.inquiry-form .form-select:focus {
+  border-color: var(--dream);
+  box-shadow: 0 0 0 0.2rem rgba(191, 163, 122, 0.2);
+}
+
+.form-success h2 {
+  font-weight: 800;
+}
+
 .site-footer {
   padding: 72px 0 28px;
   color: #fff;
@@ -561,6 +719,16 @@ img {
 
   .navbar-collapse {
     padding: 1.2rem 0;
+  }
+
+  .studio-nav .navbar-collapse {
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+  }
+
+  .studio-nav .btn.nav-link {
+    display: inline-block;
+    margin-top: 0.75rem;
   }
 
   .hero-carousel .carousel-item {

@@ -2,7 +2,7 @@
 
 ## 專案目的
 
-本專案以 Bootstrap 5 製作「夢境影像製作公司」首頁切版，視覺上參考影像製作工作室的黑色電影感、金色點綴與夢境語意元素，文字內容參考 `https://baozi3850.my.canva.site/` 的電影級製作工作室文案。
+本專案以 Bootstrap 5 製作「夢境影像 Dream Creation Studio」品牌官網，網站定位為影像製作公司的品牌形象、作品展示與專案詢價入口。視覺採用黑色電影感、金色點綴與夢境語意元素，主要服務包含商業形象影片、音樂錄影帶、社群短影音與活動紀錄。
 
 ## 目前檔案結構
 
@@ -10,6 +10,7 @@
 WEB/
 ├── index.html
 ├── commercial.html
+├── goal.html
 ├── PROJECT_SPEC.md
 ├── bootstrap-5.3.8-dist/
 │   ├── css/
@@ -55,7 +56,7 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
    - 右側文字
    - 使用 Bootstrap `row`、`col-lg-6`
 
-4. 產品介紹
+4. 影像製作服務
    - 共 4 個產品/服務模組
    - 使用 Bootstrap `card`
    - 桌機版一列 4 欄，平板版一列 2 欄
@@ -66,9 +67,22 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
    - 服務項目
    - 版權宣告
 
-## 商業形象影片作品集
+## 影像作品集
 
-`commercial.html` 為商業形象影片作品集頁面，從首頁「商業形象影片」標題連入。頁面目前提供三個影片連結欄位；請將各卡片中 `href="https://www.youtube.com/"` 改為正式作品網址。
+`commercial.html` 為完整影像作品集頁面，分類包含商業影片、音樂錄影帶、社群短影音與活動紀錄。作品卡目前以「正式作品影片待補」標示尚未提供的真實內容；取得正式素材後，應補上影片縮圖、客戶或專案名稱、製作內容、正式影片網址及可公開的專案成果。
+
+## 專案詢價頁
+
+`goal.html` 已由購買完成頁改為專案詢價頁，可透過查詢參數預選服務，例如：
+
+```text
+goal.html?service=commercial
+goal.html?service=music-video
+goal.html?service=social-video
+goal.html?service=event-record
+```
+
+目前表單只進行前端驗證，不會將資料送出裝置。正式上線前必須串接安全的表單收件服務或後端 API，並設定通知信箱、垃圾訊息防護與正式隱私權政策。
 
 ## CSS 引用規則
 
@@ -249,19 +263,26 @@ xxl: 1400px
 
 ## 目前服務項目
 
-首頁目前使用 4 個服務卡片：
+首頁目前使用 4 個服務卡片，按鈕均連至專案詢價頁並帶入服務類型：
 
 ```text
-廣告影片
-企業影片
-活動精彩片段
-社群媒體內容
+商業形象影片
+音樂錄影帶
+社群短影音
+活動紀錄
 ```
+
+## GA4 追蹤
+
+首頁服務按鈕使用 `select_content` 事件；詢價表單通過前端驗證時使用 `generate_lead` 事件，並送出 Google Ads 轉換事件 `AW-18338774301/kPNICJ3o-NYcEJ36zahE`。目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應將 GA4 與 Google Ads 轉換事件移至收件成功後才觸發。
 
 ## 待辦建議
 
-- 將目前遠端圖片全部替換為本地 `images/` 圖片
-- 補齊正式公司資訊、地址、電話與 Email
-- 將社群連結替換為正式 URL
+- 取得授權後，將目前遠端示意圖片替換為 `images/` 內的正式作品圖片
+- 補齊正式公司資訊、電話、Email 與服務地區
+- 取得正式社群帳號後再加入社群連結，避免使用空白或示範 URL
+- 串接詢價表單的正式收件服務與成功頁
+- 補上正式作品影片、客戶名稱與可公開成果
+- 加入完整隱私權政策與個資使用說明
 - 如需 icon，可下載 Bootstrap Icons 至本地端後引用
 - 可依實際品牌需求調整 Logo、字體與色彩
