@@ -274,7 +274,9 @@ xxl: 1400px
 
 ## GA4 追蹤
 
-首頁服務按鈕使用 `select_content` 事件；詢價表單通過前端驗證時使用 `generate_lead` 事件，並送出 Google Ads 轉換事件 `AW-18338774301/kPNICJ3o-NYcEJ36zahE`。目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應將 GA4 與 Google Ads 轉換事件移至收件成功後才觸發。
+首頁服務按鈕使用 `select_content` 事件。詢價表單通過前端驗證並顯示成功狀態後，使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/kPNICJ3o-NYcEJ36zahE`。每次詢價會產生唯一 `transaction_id`，並使用 `sessionStorage` 避免同一頁面工作階段重複記錄。
+
+目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應將 `trackInquiryConversion()` 移至收件 API 回傳成功之後才呼叫。Google Ads 後台也應將此轉換動作命名為「詢價送出」或「潛在客戶」，避免將詢價誤解為已付款購買。
 
 ## 待辦建議
 

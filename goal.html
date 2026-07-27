@@ -71,24 +71,45 @@
         var form = document.getElementById('inquiryForm');
         var success = document.getElementById('formSuccess');
         var service = document.getElementById('service');
+        var conversionStorageKey = 'inquiry_conversion_id';
         var requestedService = new URLSearchParams(window.location.search).get('service');
+
+        function createInquiryId() {
+          if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+            return 'INQUIRY-' + window.crypto.randomUUID();
+          }
+          return 'INQUIRY-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+        }
+
+        function trackInquiryConversion() {
+          if (typeof gtag !== 'function' || sessionStorage.getItem(conversionStorageKey)) return;
+
+          var inquiryId = createInquiryId();
+          sessionStorage.setItem(conversionStorageKey, inquiryId);
+
+          gtag('event', 'generate_lead', {
+            service_type: service.value,
+            form_status: 'demo_validated',
+            transaction_id: inquiryId
+          });
+
+          gtag('event', 'conversion', {
+            send_to: 'AW-18338774301/kPNICJ3o-NYcEJ36zahE',
+            value: 1.0,
+            currency: 'TWD',
+            transaction_id: inquiryId
+          });
+        }
+
         if (requestedService && service.querySelector('option[value="' + requestedService + '"]')) service.value = requestedService;
         form.addEventListener('submit', function (event) {
           event.preventDefault();
           form.classList.add('was-validated');
           if (!form.checkValidity()) return;
-          if (typeof gtag === 'function') {
-            gtag('event', 'generate_lead', {
-              service_type: service.value,
-              form_status: 'demo_validated'
-            });
-            gtag('event', 'conversion', {
-              send_to: 'AW-18338774301/kPNICJ3o-NYcEJ36zahE',
-              value: 1.0,
-              currency: 'TWD'
-            });
-          }
-          form.hidden = true; success.hidden = false; success.focus();
+          form.hidden = true;
+          success.hidden = false;
+          success.focus();
+          trackInquiryConversion();
         });
         document.getElementById('editInquiry').addEventListener('click', function () { success.hidden = true; form.hidden = false; document.getElementById('name').focus(); });
       }());
