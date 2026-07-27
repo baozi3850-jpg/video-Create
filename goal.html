@@ -71,7 +71,7 @@
         var form = document.getElementById('inquiryForm');
         var success = document.getElementById('formSuccess');
         var service = document.getElementById('service');
-        var conversionStorageKey = 'inquiry_conversion_id';
+        var conversionTracked = false;
         var requestedService = new URLSearchParams(window.location.search).get('service');
 
         function createInquiryId() {
@@ -82,10 +82,10 @@
         }
 
         function trackInquiryConversion() {
-          if (typeof gtag !== 'function' || sessionStorage.getItem(conversionStorageKey)) return;
+          if (typeof gtag !== 'function' || conversionTracked) return;
 
           var inquiryId = createInquiryId();
-          sessionStorage.setItem(conversionStorageKey, inquiryId);
+          conversionTracked = true;
 
           gtag('event', 'generate_lead', {
             service_type: service.value,
@@ -94,7 +94,7 @@
           });
 
           gtag('event', 'conversion', {
-            send_to: 'AW-18338774301/kPNICJ3o-NYcEJ36zahE',
+            send_to: 'AW-18338774301/4V5XCNqThNOcFJ36zahE',
             value: 1.0,
             currency: 'TWD',
             transaction_id: inquiryId
