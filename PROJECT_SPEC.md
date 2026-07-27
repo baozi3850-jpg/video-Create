@@ -10,6 +10,7 @@
 WEB/
 ├── index.html
 ├── commercial.html
+├── inquiry.html
 ├── goal.html
 ├── PROJECT_SPEC.md
 ├── bootstrap-5.3.8-dist/
@@ -73,16 +74,18 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
 
 ## 專案詢價頁
 
-`goal.html` 已由購買完成頁改為專案詢價頁，可透過查詢參數預選服務，例如：
+`inquiry.html` 為獨立專案詢價頁，可透過查詢參數預選服務，例如：
 
 ```text
-goal.html?service=commercial
-goal.html?service=music-video
-goal.html?service=social-video
-goal.html?service=event-record
+inquiry.html?service=commercial
+inquiry.html?service=music-video
+inquiry.html?service=social-video
+inquiry.html?service=event-record
 ```
 
-目前表單只進行前端驗證，不會將資料送出裝置。正式上線前必須串接安全的表單收件服務或後端 API，並設定通知信箱、垃圾訊息防護與正式隱私權政策。
+`goal.html` 為詢價完成與 Google Ads 轉換頁。詢價表單通過驗證後會建立唯一交易編號、將待轉換狀態暫存在 `sessionStorage`，再跳轉至完成頁。完成頁只有在網址交易編號與待轉換狀態相符時才送出轉換，避免直接瀏覽完成頁造成誤記。
+
+目前表單只進行前端驗證，不會將資料送出裝置。正式上線前必須串接安全的表單收件服務或後端 API，並在 API 確認收件成功後才跳轉至 `goal.html`。
 
 ## CSS 引用規則
 
@@ -274,9 +277,9 @@ xxl: 1400px
 
 ## GA4 追蹤
 
-所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁服務按鈕使用 `select_content` 事件。詢價表單通過前端驗證並顯示成功狀態後，使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/4V5XCNqThNOcFJ36zahE`。每次詢價會產生唯一 `transaction_id`，同一頁面載入期間只記錄一次。
+所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁服務按鈕使用 `select_content` 事件。`inquiry.html` 通過表單驗證後跳轉至 `goal.html`；完成頁使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/4V5XCNqThNOcFJ36zahE`。每次詢價會產生唯一 `transaction_id`。
 
-目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應將 `trackInquiryConversion()` 移至收件 API 回傳成功之後才呼叫。Google Ads 後台也應將此轉換動作命名為「詢價送出」或「潛在客戶」，避免將詢價誤解為已付款購買。
+目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應只在收件 API 回傳成功後建立待轉換狀態並前往完成頁。Google Ads 後台也應將此轉換動作命名為「詢價送出」或「潛在客戶」，避免將詢價誤解為已付款購買。
 
 ## 待辦建議
 
