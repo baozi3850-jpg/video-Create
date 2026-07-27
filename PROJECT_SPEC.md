@@ -277,7 +277,7 @@ xxl: 1400px
 
 ## GA4 追蹤
 
-所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁服務按鈕使用 `select_content` 事件。`inquiry.html` 通過表單驗證後跳轉至 `goal.html`；完成頁使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/4V5XCNqThNOcFJ36zahE`。每次詢價會產生唯一 `transaction_id`。
+所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁服務按鈕使用 `select_content` 事件。`inquiry.html` 通過表單驗證後跳轉至 `goal.html`；完成頁使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/9Lo6CIjaj9ccEJ36zahE`。每次詢價會產生唯一 `transaction_id`。
 
 目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應只在收件 API 回傳成功後建立待轉換狀態並前往完成頁。Google Ads 後台也應將此轉換動作命名為「詢價送出」或「潛在客戶」，避免將詢價誤解為已付款購買。
 
