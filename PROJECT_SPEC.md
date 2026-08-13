@@ -2,7 +2,7 @@
 
 ## 專案目的
 
-本專案以 Bootstrap 5 製作「夢境影像 Dream Creation Studio」品牌官網，網站定位為影像製作公司的品牌形象、作品展示與專案詢價入口。視覺採用黑色電影感、金色點綴與夢境語意元素，主要服務包含商業形象影片、音樂錄影帶、社群短影音與活動紀錄。
+本專案以 Bootstrap 5 製作「夢境影像 Dream Creation Studio」品牌官網，網站定位為紀錄式品牌內容與《品牌人物誌》的品牌形象、案例展示與適配通話入口。視覺以深墨藍、暖白、低飽和金與灰綠呈現節制、可信的紀錄式內容；商業形象影片、音樂錄影帶、社群短影音與活動紀錄保留為延伸影像形式。
 
 ## 目前檔案結構
 
@@ -47,25 +47,31 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
    - 固定於頁面上方
    - 含「夢境影像製作公司」品牌識別、主要導覽、下拉選單
 
-2. 輪播圖
-   - 使用 Bootstrap `carousel`
-   - 共 5 張輪播圖
-   - 含左右切換按鈕與指示點
+2. 品牌主張首屏
+   - 單一主張：「把看不見的努力，拍成被相信的理由。」
+   - 主 CTA 為「預約 30 分鐘品牌故事適配通話」
+   - 目前沿用遠端示意照片，正式品牌照片待補
 
-3. 關於我們
-   - 左側圖片
-   - 右側文字
-   - 使用 Bootstrap `row`、`col-lg-6`
+3. 問題與品牌解法
+   - 「被看見，不等於被理解」問題區
+   - 四項原則：人物理解、證據敘事、透明管理、多平台交付
 
-4. 影像製作服務
-   - 共 4 個產品/服務模組
-   - 使用 Bootstrap `card`
-   - 桌機版一列 4 欄，平板版一列 2 欄
+4. 招牌商品與延伸形式
+   - 《品牌人物誌》為第一層招牌商品
+   - 商業影片、音樂錄影帶、社群短影音、活動紀錄為延伸服務
 
-5. 頁尾資訊
+5. 合作流程
+   - 五步：適配與需求摘要、診斷與證據地圖、企劃與拍攝、紙上剪輯與審核、交付與使用建議
+
+6. 適合對象與最終 CTA
+   - 行銷／專案負責人
+   - 創辦人／品牌主理人
+   - 統一導向 `inquiry.html`
+
+7. 頁尾資訊
    - 社群連結
-   - 公司資訊
-   - 服務項目
+   - 品牌架構
+   - 延伸影像形式
    - 版權宣告
 
 ## 影像作品集
@@ -77,6 +83,8 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
 `inquiry.html` 為獨立專案詢價頁，可透過查詢參數預選服務，例如：
 
 ```text
+inquiry.html?service=brand-profile
+inquiry.html?service=diagnosis
 inquiry.html?service=commercial
 inquiry.html?service=music-video
 inquiry.html?service=social-video
@@ -110,7 +118,6 @@ Bootstrap 必須先載入，自訂 CSS 必須後載入，才能覆蓋 Bootstrap 
 
 - Navbar collapse
 - Dropdown
-- Carousel
 
 ## 自訂 CSS 維護規範
 
@@ -138,17 +145,26 @@ bootstrap-5.3.8-dist/
 
 ```text
 studio-nav
-hero-carousel
-section-kicker
-section-pad
-about-section
-about-image
-display-title
-lead-copy
-product-section
-section-heading
-product-card
-site-footer
+    hero-intro
+    hero-intro-content
+    section-kicker
+    section-pad
+    problem-section
+    problem-list
+    principle-grid
+    principle-card
+    display-title
+    lead-copy
+    product-section
+    product-feature
+    deliverable-list
+    service-card
+    section-heading
+    process-section
+    process-grid
+    fit-section
+    final-cta
+    site-footer
 footer-brand
 footer-copy
 social-links
@@ -166,7 +182,7 @@ copyright
 
 ## 圖片維護規則
 
-目前頁面仍有遠端圖片路徑，若要改成本地端圖片，建議新增：
+目前首頁仍有遠端示意圖片，正式品牌照片與案例素材確認授權後再改成本地端圖片，建議新增：
 
 ```text
 images/
@@ -207,10 +223,10 @@ images/
 
 - `max-width: 991.98px`
   - 調整手機和平板選單
-  - 調整輪播高度
+  - 調整首屏內容與導覽高度
 
 - `max-width: 575.98px`
-  - 調整手機版輪播高度
+  - 調整手機版首屏與 CTA 排列
   - 頁尾版權資訊改為上下排列
 
 後續維護時，建議沿用 Bootstrap 斷點：
@@ -266,9 +282,11 @@ xxl: 1400px
 
 ## 目前服務項目
 
-首頁目前使用 4 個服務卡片，按鈕均連至專案詢價頁並帶入服務類型：
+首頁目前以《品牌人物誌》作為招牌商品，四項形式保留為延伸服務；按鈕連至適配通話頁並帶入方向：
 
 ```text
+《品牌人物誌》
+品牌故事診斷
 商業形象影片
 音樂錄影帶
 社群短影音
@@ -277,16 +295,17 @@ xxl: 1400px
 
 ## GA4 追蹤
 
-所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁服務按鈕使用 `select_content` 事件。`inquiry.html` 通過表單驗證後跳轉至 `goal.html`；完成頁使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/9Lo6CIjaj9ccEJ36zahE`。每次詢價會產生唯一 `transaction_id`。
+所有主要頁面均載入 GA4 `G-04LJ9PZG1F` 與 Google Ads `AW-18338774301` 的 Google tag。首頁延伸服務按鈕使用 `select_content` 事件；首頁各主要 CTA 使用 `fit_call_click` 事件。`inquiry.html` 通過表單驗證後跳轉至 `goal.html`；完成頁使用 `generate_lead` 事件並送出 Google Ads 轉換事件 `AW-18338774301/9Lo6CIjaj9ccEJ36zahE`。每次詢問會產生唯一 `transaction_id`。
 
 目前以 `form_status: demo_validated` 標示仍是展示流程；正式串接收件服務後，應只在收件 API 回傳成功後建立待轉換狀態並前往完成頁。Google Ads 後台也應將此轉換動作命名為「詢價送出」或「潛在客戶」，避免將詢價誤解為已付款購買。
 
 ## 待辦建議
 
 - 取得授權後，將目前遠端示意圖片替換為 `images/` 內的正式作品圖片
+- 補上首頁《品牌人物誌》的真實案例、人物照片與可公開證言
+- 決定正式預約工具或安全表單收件端點，完成後才將展示流程改為正式轉換
 - 補齊正式公司資訊、電話、Email 與服務地區
-- 取得正式社群帳號後再加入社群連結，避免使用空白或示範 URL
-- 串接詢價表單的正式收件服務與成功頁
+- 取得正式社群帳號後再確認社群連結與貼文內容
 - 補上正式作品影片、客戶名稱與可公開成果
 - 加入完整隱私權政策與個資使用說明
 - 如需 icon，可下載 Bootstrap Icons 至本地端後引用
