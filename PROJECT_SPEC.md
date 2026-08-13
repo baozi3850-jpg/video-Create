@@ -66,9 +66,15 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
 6. 適合對象與最終 CTA
    - 行銷／專案負責人
    - 創辦人／品牌主理人
+   - 補充可能不適合的合作情境
    - 統一導向 `inquiry.html`
 
-7. 頁尾資訊
+7. FAQ 與採購判斷
+   - 適配通話適用情境
+   - 腳本、時程、修改、價格因素與延伸形式說明
+   - 所有承諾保留為適配後確認，不把假設價格或固定時程當成公開事實
+
+8. 頁尾資訊
    - 社群連結
    - 品牌架構
    - 延伸影像形式
@@ -90,6 +96,8 @@ inquiry.html?service=music-video
 inquiry.html?service=social-video
 inquiry.html?service=event-record
 ```
+
+適配通話表單會先詢問角色、觸發事件、服務方向、預算、使用場景、時程與決策階段，作為是否適合進一步對話的判斷資料；目前仍只做前端驗證，不會送出資料。
 
 `goal.html` 為詢價完成與 Google Ads 轉換頁。詢價表單通過驗證後會建立唯一交易編號、將待轉換狀態暫存在 `sessionStorage`，再跳轉至完成頁。完成頁只有在網址交易編號與待轉換狀態相符時才送出轉換，避免直接瀏覽完成頁造成誤記。
 
@@ -163,6 +171,9 @@ studio-nav
     process-section
     process-grid
     fit-section
+    fit-card-muted
+    faq-section
+    faq-list
     final-cta
     site-footer
 footer-brand
@@ -292,6 +303,10 @@ xxl: 1400px
 社群短影音
 活動紀錄
 ```
+
+## 第二階段：信任與採購內容
+
+目前首頁已補上「適合／不適合」判斷與 FAQ，說明腳本準備、時程、修改、價格影響因素及延伸影像形式。這些內容是採購判斷基準，不代表固定報價、保證時程或結果承諾；正式範圍需經適配與工時核算確認。
 
 ## GA4 追蹤
 
