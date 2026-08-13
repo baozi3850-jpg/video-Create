@@ -53,20 +53,22 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
    - 目前沿用遠端示意照片，正式品牌照片待補
 
 3. 問題與品牌解法
-   - 「被看見，不等於被理解」問題區
-   - 四項原則：人物理解、證據敘事、透明管理、多平台交付
+   - 以訪客語氣說明「有重要的事，卻很難讓別人聽懂」的常見情境
+   - 以細線分隔的三段短文說明合作方式，不使用編號卡片
 
 4. 招牌商品與延伸形式
-   - 《品牌人物誌》為第一層招牌商品
+   - 《品牌人物誌》以人物、現場與重要選擇介紹品牌故事影像
+   - 使用照片與編輯式文字欄位，不以規格表或深色簡報面板呈現
    - 商業影片、音樂錄影帶、社群短影音、活動紀錄為延伸服務
+   - 延伸形式以水平文字清單呈現，連到作品集對應區段
 
 5. 合作流程
-   - 五步：適配與需求摘要、診斷與證據地圖、企劃與拍攝、紙上剪輯與審核、交付與使用建議
+   - 以訪客看得懂的四段敘事呈現：第一次對談、一起找故事、拍攝與剪輯、交付之後
 
 6. 適合對象與最終 CTA
    - 行銷／專案負責人
    - 創辦人／品牌主理人
-   - 補充可能不適合的合作情境
+   - 以「可能適合你／可以再等等」兩欄文字判斷呈現，不使用三張卡片
    - 統一導向 `inquiry.html`
 
 7. FAQ 與採購判斷
@@ -76,8 +78,8 @@ SSH:   git@github.com:baozi3850-jpg/video-Create.git
 
 8. 頁尾資訊
    - 社群連結
-   - 品牌架構
-   - 延伸影像形式
+   - 認識夢境影像
+   - 影像形式
    - 版權宣告
 
 ## 影像作品集
@@ -158,20 +160,32 @@ studio-nav
     section-kicker
     section-pad
     problem-section
-    problem-list
-    principle-grid
-    principle-card
+    editorial-intro
+    editorial-copy
+    approach-strip
+    approach-item
     display-title
     lead-copy
     product-section
-    product-feature
-    deliverable-list
-    service-card
+    brand-story-layout
+    brand-story-media
+    brand-story-copy
+    story-points
+    story-points-intro
+    story-point
+    service-list
+    service-line
     section-heading
     process-section
-    process-grid
+    process-intro
+    process-list
+    process-step
+    process-step-label
     fit-section
-    fit-card-muted
+    fit-intro
+    fit-columns
+    fit-column
+    fit-column-muted
     faq-section
     faq-list
     final-cta
