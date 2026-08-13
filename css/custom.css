@@ -758,6 +758,69 @@ img {
   color: var(--dream);
 }
 
+.fit-card-muted {
+  background: #fff;
+  border: 1px solid rgba(23, 38, 45, 0.18);
+  border-left: 3px solid var(--mist);
+}
+
+.fit-card-muted .card-label {
+  color: var(--mist);
+}
+
+.faq-section {
+  background: var(--paper);
+}
+
+.faq-section .section-heading {
+  max-width: 820px;
+}
+
+.faq-list {
+  max-width: 920px;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(23, 38, 45, 0.2);
+}
+
+.faq-list .accordion-item {
+  border-color: rgba(23, 38, 45, 0.2);
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.faq-list .accordion-button {
+  padding: 1.25rem 0;
+  color: var(--ink);
+  font-family: "Noto Serif TC", "Songti TC", Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  background: transparent;
+  box-shadow: none;
+}
+
+.faq-list .accordion-button:not(.collapsed) {
+  color: var(--ink);
+  background: transparent;
+}
+
+.faq-list .accordion-button:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 0.2rem rgba(201, 168, 92, 0.22);
+}
+
+.faq-list .accordion-button::after {
+  background-size: 0.9rem;
+}
+
+.faq-list .accordion-body {
+  max-width: 760px;
+  padding: 0 3rem 1.35rem 0;
+  color: var(--soft-ink);
+  line-height: 1.85;
+}
+
 .final-cta {
   padding: clamp(4rem, 9vw, 8rem) 0;
   color: #fff;
